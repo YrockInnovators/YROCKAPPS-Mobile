@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title style="text-align: center;">YROCK Apps</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="card-background-page background">
+  <div class="brading">
+  <!--    <div style="text-align:center;">
+    <a><button ion-button color="secondary">Register</button>
+    </a></div> <br />
+  -->
+  <!--<img src="assets/img/yrock.png">-->
+      <ion-slides *ngFor="let u of user">
+       <ion-slide>
+           <ion-card>
+<!--           <img src="{{u.logo.url}}" (click)="openmodal(u)"> -->
+          <img src="{{u.webContentLink}}">
+           </ion-card>
+       </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

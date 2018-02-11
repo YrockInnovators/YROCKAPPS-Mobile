@@ -1,0 +1,59 @@
+<ion-header>
+<ion-navbar color="secondary">
+    <ion-title style="text-align: center;">New Friends</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="orderForm">
+  <ion-list>
+    <ion-list-header>
+    <div style="text-align: center;">Attendees count: {{sumValue}} &nbsp; <a><button ion-button color="secondary" (click)="opennewmembermodal()">Check New Friends</button></a></div>
+    </ion-list-header>
+    <ion-item>
+    <ion-label color="secondary" fixed>Name</ion-label>
+    <ion-input [(ngModel)]="newmembers" placeholder="FirstName LastName" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label color="secondary" fixed>Contact #</ion-label>
+    <ion-input [(ngModel)]="contact" type="tel" placeholder="Mobile #" formControlName="contact"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label color="secondary" fixed>Lifegroup</ion-label>
+         <ion-select color="secondary" [(ngModel)]="location" placeholder="Select location" formControlName="location">
+       <ion-option value="Cubao">Cubao-Main</ion-option>
+       <ion-option value="Camanava">CAMANAVA</ion-option>
+       <ion-option value="Pampanga">Pampanga</ion-option>
+       <ion-option value="Laguna">Laguna</ion-option>
+       <ion-option value="Sanmateo">San Mateo(Rizal)</ion-option>
+       <ion-option value="Antipolo">Antipolo(Rizal)</ion-option>
+       <ion-option value="Cavite">Cavite</ion-option>
+       <ion-option value="Fairview-Bulacan">Fairview/Bulacan</ion-option>
+       <ion-option value="EDGE-Makati">EDGE Makati/Pasay</ion-option>
+       <ion-option value="EDGE-Makati">EDGE Cubao</ion-option>
+       <ion-option value="EDGE-makati">EDGE BGC</ion-option>
+       <ion-option value="EDGE-makati">EDGE Ortigas</ion-option>
+       <ion-option value="EDGE-makati">EDGE Eastwood</ion-option>
+       <ion-option value="EDGE-makati">EDGE Technohub</ion-option>
+       <ion-option value="EDGE-makati">EDGE Manila</ion-option>
+     </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="secondary" fixed>Ministry</ion-label>
+       <ion-select color="secondary" [(ngModel)]="ministry" placeholder="Select Ministry" formControlName="ministry">
+          <ion-option value="Youth">Youth</ion-option>
+          <ion-option value="EDGE">EDGE</ion-option>
+          <ion-option value="Parents">Parents</ion-option>  
+       </ion-select>
+    </ion-item>
+    <ion-item>
+    <ion-label color="secondary" stacked>Email Address</ion-label>
+    <ion-input [(ngModel)]="email" type="email" placeholder="Email Address"  formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label color="secondary" fixed>Invited By</ion-label>
+    <ion-input [(ngModel)]="invitedby" placeholder="Person invited you"  formControlName="invitedby"></ion-input>
+    </ion-item>
+  </ion-list>
+  </form>
+  <div style="text-align: center;"><a><button ion-button color="secondary" [disabled]="!orderForm.valid" (click)="addmembers(newmembers,contact,location,ministry,email,invitedby)">Submit</button></a></div>
+</ion-content>

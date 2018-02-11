@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1084603466535",
+    "firebase_url": "https://yrockdb.firebaseio.com",
+    "project_id": "yrockdb",
+    "storage_bucket": "yrockdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084603466535:android:274cf88577b9b57d",
+        "android_client_info": {
+          "package_name": "ph.com.yrockapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084603466535-cq8350evjont01tnoje9unklqch9viht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhNtxoRYkoXX_59zdfyV-sAwxag1y991Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
